@@ -84,7 +84,7 @@ footer{flex-wrap:wrap;line-height:1.7}
 
 /* Equal thirds of yellow, blue and purple across the theme. */
 html[data-theme=spectrum]{--bg:#fff8d6;--panel:#fffdf0;--panel2:#fff0a8;--ink:#292344;--muted:#645b50;--line:#e5d99c;--accent:#6836b5;--accent2:#2458bf;--accentink:#fff;--glow:#fff0a8}
-html[data-theme=spectrum] body{background:linear-gradient(110deg,#fff8d6 0% 33.333%,#eaf1ff 33.333% 66.667%,#f1e9ff 66.667% 100%)}
+html[data-theme=spectrum] body{background-color:#faf9ff;background-image:radial-gradient(ellipse at 15% 15%,#ffe68155,transparent 55%),radial-gradient(ellipse at 85% 35%,#92b8ff55,transparent 55%),radial-gradient(ellipse at 50% 85%,#c6a0ff55,transparent 55%);background-size:100% 100vh;background-repeat:repeat-y}
 html[data-theme=spectrum] .primary{background:#facc15;border-color:#d9ae09;color:#30264e}
 html[data-theme=spectrum] .primary:hover{background:#fde047;box-shadow:0 8px 24px #caa31826}
 html[data-theme=spectrum] .impact:nth-child(1){background:#fff1a9}
@@ -96,11 +96,11 @@ html[data-theme=spectrum] .impact:nth-child(3) strong{color:#7133be}
 html[data-theme=spectrum] .filters button[aria-pressed=true]{background:#ffe88a;border-color:#d9bd50;color:#473a13}
 html[data-theme=spectrum] .brand{background-image:linear-gradient(100deg,#926c00,#2458bf,#7b32c9,#926c00)}
 html[data-theme=spectrum] .scroll-progress{background:linear-gradient(90deg,#e1b208 0% 33.333%,#2563eb 33.333% 66.667%,#9333ea 66.667% 100%)}
-html[data-theme=spectrum] .system-art{background:linear-gradient(135deg,#fff2b3 0% 33.333%,#e4edff 33.333% 66.667%,#eaddff 66.667% 100%)}
+html[data-theme=spectrum] .system-art{background:linear-gradient(135deg,#fff4cd,#e7efff,#edddff)}
 html[data-theme=spectrum] .system-core{border-color:#c9ac45;background:#fffbea}
 html[data-theme=spectrum] .system-node{background:#fffdf0;border-color:#d7c98b}
-html[data-theme=spectrum] .skill-card{background:linear-gradient(110deg,#fff4bf 0% 33.333%,#eaf1ff 33.333% 66.667%,#f1e9ff 66.667% 100%)}
-html[data-theme=spectrum] .contact{background:linear-gradient(110deg,#fff0a8 0% 33.333%,#e4edff 33.333% 66.667%,#ecdeff 66.667% 100%)}
+html[data-theme=spectrum] .skill-card{background:linear-gradient(120deg,#fff9df,#eff4ff,#f6efff)}
+html[data-theme=spectrum] .contact{background:linear-gradient(120deg,#fff4c9,#e9f0ff,#efe3ff)}
 html[data-theme=spectrum] .theme-options button[aria-pressed=true]{border-color:#cdb04a}
 
 html[data-theme=spectrum]{--panel:#fcfbff;--panel2:#eeecfa;--muted:#5e5c72;--line:#d9d5e7}
