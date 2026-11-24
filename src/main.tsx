@@ -4,9 +4,9 @@ import{ArrowUpRight,ArrowRight,ArrowDown,Check,Code2,Command,Copy,Download,Exter
 import{projects,experience,skills,type Project,type Category}from'./data';
 import './style.css';
 import {useScrollReveal} from './useScrollReveal';
-type Theme='navy'|'light'|'dark'|'cherry';
-const themes:{id:Theme;label:string;color:string}[]=[{id:'navy',label:'Navy Blue',color:'#718eff'},{id:'light',label:'Light',color:'#edece6'},{id:'dark',label:'Dark',color:'#48484d'},{id:'cherry',label:'Cherry Blossom',color:'#e788ae'}];
-function savedTheme():Theme{try{const t=localStorage.getItem('portfolio-theme');if(themes.some(x=>x.id===t))return t as Theme;}catch{}return'navy'}
+type Theme='spectrum'|'light'|'dark'|'cherry';
+const themes:{id:Theme;label:string;color:string}[]=[{id:'spectrum',label:'Blue · Yellow · Purple',color:'linear-gradient(135deg,#2563eb 0% 33%,#facc15 33% 66%,#9333ea 66%)'},{id:'light',label:'Light',color:'#edece6'},{id:'dark',label:'Dark',color:'#48484d'},{id:'cherry',label:'Cherry Blossom',color:'#e788ae'}];
+function savedTheme():Theme{try{const t=localStorage.getItem('portfolio-theme');if(themes.some(x=>x.id===t))return t as Theme;}catch{}return'spectrum'}
 // Artwork depends only on the project ID; reuse it during unrelated UI updates.
 const Art=memo(function Art({id}:{id:string}){if(id==='research')return <div className="art art-research" aria-hidden="true"><div className="browser-ui"><div className="browser-top"><i/><i/><i/><span>Research, in context</span></div><div className="browser-content"><div className="document-lines"><b>Ideas worth keeping.</b><span/><span/><mark>Make sense of what you read.</mark><span/><span/></div><div className="ai-panel"><Sparkles size={19}/><b>Research Assistant</b><p>A clearer view of the important ideas.</p><div>Summarize <ArrowRight size={13}/></div><small>Topics · Keywords · Insights</small></div></div></div><span className="art-tag"><Sparkles size={12}/> AI IN YOUR WORKFLOW</span></div>;
 if(id==='chess')return <div className="art art-chess" aria-hidden="true"><div className="chessboard">{Array.from({length:64},(_,i)=><span key={i} className={(Math.floor(i/8)+i%8)%2?'black':''}>{({4:'♚',12:'♟',13:'♟',18:'♞',27:'♙',36:'♟',42:'♘',51:'♙',60:'♔'}as Record<number,string>)[i]}</span>)}</div><div className="chess-stat"><span>OPENING INSIGHTS</span><div className="mini-bars">{[45,80,55,95,65].map((n,i)=><i key={i} style={{height:n+'%'}}/>)}</div><small>Patterns beyond the board</small></div><span className="art-tag">64 SQUARES. COUNTLESS PATTERNS.</span></div>;
