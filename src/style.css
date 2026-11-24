@@ -104,3 +104,17 @@ html[data-theme=spectrum] .contact{background:linear-gradient(120deg,#fff4c9,#e9
 html[data-theme=spectrum] .theme-options button[aria-pressed=true]{border-color:#cdb04a}
 
 html[data-theme=spectrum]{--panel:#fcfbff;--panel2:#eeecfa;--muted:#5e5c72;--line:#d9d5e7}
+
+/* Whitish radiance: pearl surfaces with equally soft three-color light. */
+html[data-theme=spectrum]{--bg:#fdfdff;--panel:#ffffffeb;--panel2:#f5f5fc;--ink:#29283e;--muted:#626177;--line:#e3e3ef;--glow:#f1effb}
+html[data-theme=spectrum] body{background-color:#fdfdff;background-image:radial-gradient(ellipse at 15% 15%,#ffe68126,transparent 55%),radial-gradient(ellipse at 85% 35%,#92b8ff26,transparent 55%),radial-gradient(ellipse at 50% 85%,#c6a0ff26,transparent 55%)}
+html[data-theme=spectrum] .project,html[data-theme=spectrum] .skill-card,html[data-theme=spectrum] .education-grid article{background:#ffffffdf;box-shadow:0 5px 30px #7775a009,inset 0 1px 0 #fff}
+html[data-theme=spectrum] .impact:nth-child(1){background:#fffdf2}
+html[data-theme=spectrum] .impact:nth-child(2){background:#f6f9ff}
+html[data-theme=spectrum] .impact:nth-child(3){background:#fbf7ff}
+html[data-theme=spectrum] .system-art,html[data-theme=spectrum] .contact{background:radial-gradient(ellipse at 15% 15%,#ffe68120,transparent 60%),radial-gradient(ellipse at 85% 35%,#92b8ff20,transparent 60%),radial-gradient(ellipse at 50% 85%,#c6a0ff20,transparent 60%),#ffffff;box-shadow:0 10px 45px #7775a00c,inset 0 1px 0 #fff}
+html[data-theme=spectrum] .system-core{background:#fff;border-color:#cec9e8;box-shadow:0 0 45px #c6baff2b}
+html[data-theme=spectrum] .system-node{background:#ffffffed;border-color:#e1deee}
+html[data-theme=spectrum] .primary{background:#fff2ae;border-color:#eadb91;color:#3d354c}
+html[data-theme=spectrum] .primary:hover{background:#ffe98b}
+html[data-theme=spectrum] .filters button[aria-pressed=true]{background:#f3f1fc;border-color:#d8d3ea;color:#553885}
