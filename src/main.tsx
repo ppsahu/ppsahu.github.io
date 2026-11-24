@@ -5,7 +5,7 @@ import{projects,experience,skills,type Project,type Category}from'./data';
 import './style.css';
 import {useScrollReveal} from './useScrollReveal';
 type Theme='spectrum'|'light'|'dark'|'cherry';
-const themes:{id:Theme;label:string;color:string}[]=[{id:'spectrum',label:'Blue · Yellow · Purple',color:'linear-gradient(135deg,#2563eb 0% 33%,#facc15 33% 66%,#9333ea 66%)'},{id:'light',label:'Light',color:'#edece6'},{id:'dark',label:'Dark',color:'#48484d'},{id:'cherry',label:'Cherry Blossom',color:'#e788ae'}];
+const themes:{id:Theme;label:string;color:string}[]=[{id:'spectrum',label:'Blue · Yellow · Purple',color:'linear-gradient(135deg,#facc15 0% 50%,#2563eb 50% 75%,#9333ea 75% 100%)'},{id:'light',label:'Light',color:'#edece6'},{id:'dark',label:'Dark',color:'#48484d'},{id:'cherry',label:'Cherry Blossom',color:'#e788ae'}];
 function savedTheme():Theme{try{const t=localStorage.getItem('portfolio-theme');if(themes.some(x=>x.id===t))return t as Theme;}catch{}return'spectrum'}
 // Artwork depends only on the project ID; reuse it during unrelated UI updates.
 const Art=memo(function Art({id}:{id:string}){if(id==='research')return <div className="art art-research" aria-hidden="true"><div className="browser-ui"><div className="browser-top"><i/><i/><i/><span>Research, in context</span></div><div className="browser-content"><div className="document-lines"><b>Ideas worth keeping.</b><span/><span/><mark>Make sense of what you read.</mark><span/><span/></div><div className="ai-panel"><Sparkles size={19}/><b>Research Assistant</b><p>A clearer view of the important ideas.</p><div>Summarize <ArrowRight size={13}/></div><small>Topics · Keywords · Insights</small></div></div></div><span className="art-tag"><Sparkles size={12}/> AI IN YOUR WORKFLOW</span></div>;

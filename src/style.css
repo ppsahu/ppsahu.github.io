@@ -82,18 +82,25 @@ footer{flex-wrap:wrap;line-height:1.7}
 @media(prefers-reduced-motion:reduce){.scroll-reveal,.scroll-reveal.reveal-pending{opacity:1;translate:none;transition:none}}
 @media print{.scroll-reveal,.scroll-reveal.reveal-pending{opacity:1;translate:none;transition:none}}
 
-/* Blue, yellow and purple: cool surfaces, violet headings, sunny calls to action. */
-html[data-theme=spectrum] body{background:radial-gradient(ellipse at 95% 10%,#e9e0ff80,transparent 45%),radial-gradient(ellipse at 0% 45%,#dbeaff80,transparent 45%),var(--bg)}
-html[data-theme=spectrum] .primary{background:#facc15;border-color:#e4ba0a;color:#30264e}
+/* Yellow leads the composition; blue and purple share the secondary surfaces. */
+html[data-theme=spectrum]{--bg:#fff8d6;--panel:#fffdf0;--panel2:#fff0a8;--ink:#292344;--muted:#645b50;--line:#e5d99c;--accent:#6836b5;--accent2:#2458bf;--accentink:#fff;--glow:#fff0a8}
+html[data-theme=spectrum] body{background:linear-gradient(110deg,#fff8d6 0% 50%,#eaf1ff 50% 75%,#f1e9ff 75% 100%)}
+html[data-theme=spectrum] .primary{background:#facc15;border-color:#d9ae09;color:#30264e}
 html[data-theme=spectrum] .primary:hover{background:#fde047;box-shadow:0 8px 24px #caa31826}
-html[data-theme=spectrum] .impact strong{color:#2458bf}
-html[data-theme=spectrum] .impact:nth-child(2) strong{color:#7133be}
-html[data-theme=spectrum] .impact:nth-child(3){background:#fffbea}
-html[data-theme=spectrum] .impact:nth-child(3) strong{color:#765a08}
-html[data-theme=spectrum] .filters button[aria-pressed=true]{background:#e5edff;border-color:#b8c9ef;color:#2458bf}
-html[data-theme=spectrum] .brand{background-image:linear-gradient(100deg,#2458bf,#7b32c9,#926c00,#2458bf)}
-html[data-theme=spectrum] .scroll-progress{background:linear-gradient(90deg,#2563eb,#9333ea,#e1b208)}
-html[data-theme=spectrum] .system-art{background:radial-gradient(ellipse at center,#e4ddff,#edf3ff 70%)}
-html[data-theme=spectrum] .system-core{border-color:#7846c7;background:#fffefa}
-html[data-theme=spectrum] .system-node{background:#fff;border-color:#c9cbed}
-html[data-theme=spectrum] .theme-options button[aria-pressed=true]{border-color:#b4a0df}
+html[data-theme=spectrum] .impact:nth-child(1){background:#fff1a9}
+html[data-theme=spectrum] .impact:nth-child(2){background:#eaf1ff}
+html[data-theme=spectrum] .impact:nth-child(3){background:#f1e9ff}
+html[data-theme=spectrum] .impact strong{color:#765a08}
+html[data-theme=spectrum] .impact:nth-child(2) strong{color:#2458bf}
+html[data-theme=spectrum] .impact:nth-child(3) strong{color:#7133be}
+html[data-theme=spectrum] .filters button[aria-pressed=true]{background:#ffe88a;border-color:#d9bd50;color:#473a13}
+html[data-theme=spectrum] .brand{background-image:linear-gradient(100deg,#926c00,#2458bf,#7b32c9,#926c00)}
+html[data-theme=spectrum] .scroll-progress{background:linear-gradient(90deg,#e1b208 0% 50%,#2563eb 50% 75%,#9333ea 75% 100%)}
+html[data-theme=spectrum] .system-art{background:linear-gradient(135deg,#fff2b3 0% 50%,#e4edff 50% 75%,#eaddff 75% 100%)}
+html[data-theme=spectrum] .system-core{border-color:#c9ac45;background:#fffbea}
+html[data-theme=spectrum] .system-node{background:#fffdf0;border-color:#d7c98b}
+html[data-theme=spectrum] .skill-card:nth-child(4n+1),html[data-theme=spectrum] .skill-card:nth-child(4n+2){background:#fff4bf}
+html[data-theme=spectrum] .skill-card:nth-child(4n+3){background:#eaf1ff}
+html[data-theme=spectrum] .skill-card:nth-child(4n+4){background:#f1e9ff}
+html[data-theme=spectrum] .contact{background:linear-gradient(110deg,#fff0a8 0% 50%,#e4edff 50% 75%,#ecdeff 75% 100%)}
+html[data-theme=spectrum] .theme-options button[aria-pressed=true]{border-color:#cdb04a}
