@@ -25,11 +25,17 @@ export function useScrollReveal(dependency: string, paused: boolean) {
       });
     }, {threshold: 0, rootMargin: '0px 0px -35px 0px'});
     const viewportHeight = window.innerHeight;
-    const positions = elements.map(element => ({element, bounds: element.getBoundingClientRect()}));
+    // Completed reveals need no further layout measurements when filters change.
+    const positions = elements
+      .filter(element => !revealed.current.has(element))
+      .map(element => ({element, bounds: element.getBoundingClientRect()}));
     positions.forEach(({element, bounds}) => {
       element.classList.add('scroll-reveal');
       // Keep content already on screen (including deep links) visible immediately.
-      if (revealed.current.has(element) || bounds.top < viewportHeight) return;
+      if (bounds.top < viewportHeight) {
+        revealed.current.add(element);
+        return;
+      }
       const siblings = element.parentElement?.children;
       const index = siblings ? Array.from(siblings).indexOf(element) : 0;
       element.style.setProperty('--reveal-delay', `${Math.min(index % 2, 1) * 90}ms`);
